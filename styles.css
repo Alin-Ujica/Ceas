@@ -1,0 +1,173 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    min-height: 100vh;
+    background-color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    animation: text 5s infinite;
+}
+
+@keyframes text {
+    0% {
+      color: #ff0000;
+    }
+    
+    16% {
+     color: #ff6a00;
+    }
+ 
+    32% {
+     color: #ffff00;
+    }
+ 
+    48% {
+     color:#00ff00 ;
+    }
+ 
+    64% {
+     color:#00fffb ;
+    }
+ 
+    80% {
+     color:#0000ff ;
+    }
+ 
+    100% {
+     color:#9900ff ;
+    }
+ }
+
+.clock {
+    height: 250px;
+    width: 250px;
+    background: url(images/clock.png) no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    border: 10px solid #ffdb28;
+    border-radius: 50%;
+    position: relative;
+    animation: clock 5s infinite;
+}
+
+@keyframes clock {
+   0% {
+     border-color: #ff0000;
+   }
+   
+   16% {
+    border-color: #ff6a00;
+   }
+
+   32% {
+    border-color: #ffff00;
+   }
+
+   48% {
+    border-color:#00ff00 ;
+   }
+
+   64% {
+    border-color:#00fffb ;
+   }
+
+   80% {
+    border-color:#0000ff ;
+   }
+
+   100% {
+    border-color:#9900ff ;
+   }
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    top: 105px;
+    left: 105px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #5d5d5d;
+    z-index: 2;
+} 
+
+.second {
+    height: 115px;
+    width: 4px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 113px;
+    z-index: 1;
+    border-radius: 100% 100% 5px 5px;
+    animation: second 60s steps(60) infinite;
+    transform-origin: 50% 80%;
+}
+
+@keyframes second {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+} 
+
+
+.minute {
+    height: 105px;
+    width: 4px;
+    background-color: #676767;
+    position: absolute;
+    top: 35px;
+    left: 113px;
+    z-index: 1;
+    border-radius: 100% 100% 5px 5px;
+    animation: minute 3600s steps(3600) infinite;
+    transform-origin: 50% 80%;
+}
+
+@keyframes minute {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+} 
+
+.hour {
+    height: 95px;
+    width: 5px;
+    background-color: #ffe66b;
+    position: absolute;
+    top: 45px;
+    left: 113px;
+    z-index: 1;
+    border-radius: 100% 100% 5px 5px;
+    animation: hour 43200s steps(43200) infinite;
+    transform-origin: 50% 80%;
+}
+
+@keyframes hour {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+} 
+
+
+
